@@ -1,0 +1,38 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+#myBtn{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 25px;
+    border: 1px solid gray;
+    outline: none;
+    color: gray;
+    background-color: #4286f4;
+    cursor: pointer;
+    border-radius: 7px;
+    padding: 8px 15px;
+    display: none;
+    transition: 0.5s;
+}
+
+#myBtn:hover{
+    color: black;
+    border: 1px solid black;
+    background-color: #005bef;
+}
+
+@media(max-width: 768px){
+    #myBtn{
+    font-size: 20px;
+    padding: 8px 15px;
+    }
+}
