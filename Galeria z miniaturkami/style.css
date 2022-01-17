@@ -1,0 +1,46 @@
+body{
+    margin: 20px;
+}
+
+.thumbnail{
+    width: 150px;
+    height: 100px;
+    opacity: 0.8;
+}
+
+.thumbnail:hover{
+    border-bottom: 3px solid red;
+    margin-bottom: -3px;
+    opacity: 1;
+}
+
+#mainImage{
+    max-width: 800px;
+    max-height: 400px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#mainImage img{
+    width: 100%;
+    height: auto;
+}
+
+.current{
+    border-bottom: 3px solid red;
+    margin-bottom: -3px;
+    opacity: 1;
+}
+
+@keyframes animacja-obrazka {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.imgAnimation{
+    animation: animacja-obrazka 0.9s normal;
+}
