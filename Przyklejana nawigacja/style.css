@@ -1,0 +1,50 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.topDiv{
+    width: 100%;
+    background: #f1f1f1;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topDiv p{
+    padding: 0 10%;
+    font-size: 25px;
+}
+
+.navi{
+    background-color: #333;
+    height: auto;
+    text-align: center;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.navi a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 14px 16px;
+    width: 140px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+nav a:hover{
+    background: gray;
+}
+
+.responsive{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
