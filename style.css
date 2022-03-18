@@ -112,7 +112,7 @@ nav span.icon{
      nav span.icon{
         display: block;
         position: fixed;
-        top: 15px;
+        top: 5px;
         right: 20px;
         color: gray;
     }
