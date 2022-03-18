@@ -1,23 +1,23 @@
 body{
-    margin: 20px;
+	margin: 0;
 }
 
 #test1{
     color: red;
-    font-size: 100px;
+    font-size: 12vmin;
     font-weight: 500;
     text-align: center;
     border-radius: 15px;
-    width: 50%;
-    height: 300px;
+    width: 60%;
+	padding: 10%;
     margin: 0 auto;
-    background: rgb(2,0,36);
     background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(31,153,212,1) 54%, rgba(0,212,255,1) 100%);
     position: relative;
+	box-sizing: border-box;
     
 }
 
-#test1 #zegar{
+#zegar{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -25,7 +25,7 @@ body{
     font-family: digital_clock;
     background-color: rgb(24, 21, 21);
     margin: 0;
-    width: 45%;
+    width: 50%;
     border-radius: 10px;
     padding: 5px;
     border: 7px double rgb(212, 207, 207);
@@ -35,3 +35,12 @@ body{
     font-family: digital_clock;
     src: url(digital-7/digital-7.ttf);
 }
+
+@media(max-width: 780px){
+	#test1{
+    width: 100%;
+	padding: 20%;
+}
+}
+	
+
