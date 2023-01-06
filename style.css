@@ -66,11 +66,10 @@ nav{
 }
 
 #nav-right{
-	width: 70%;
+	width: 100%;
 	text-align: right;
-	padding: 1%;
-	height: 3.5rem;
-    float: right;
+	padding: 0.8rem;
+    transition: all 0.4s;
 }
 
 #nav-right a{
@@ -82,14 +81,10 @@ nav{
 	font-size: 1.1rem;
 }
 
-#nav-right:last-child{
-	padding-right: 2rem;
-}
-
 #nav-right a:hover{
 	border-bottom: 0.15vw solid red;
 	color: black;
-	transition: 0.2s;
+	transition: all 0.2s;
 }
 
 .clicked{
@@ -108,11 +103,11 @@ nav span.icon{
 }
 
 @media(max-width: 768px){
-    #nav-right{display: none;}
+    #nav-right{ display: none;}
      nav span.icon{
         display: block;
         position: fixed;
-        top: 15px;
+        top: 10px;
         right: 20px;
         color: gray;
         transition: all 0.3s;
@@ -142,6 +137,7 @@ nav span.icon{
         display: block;
         transition: all 0.4s;
         z-index: 1000;
+        opacity: 1;
     }
     
     #nav-right.responsive a{
@@ -206,35 +202,38 @@ header{
 	max-width: 1140px;
 }
 
-.in-header h2{
-	font-size: 2rem;
+.in-header a{
+	background-color: #f2f2f2df;
+    font-size: 2rem;
+    display: inline-block;
+    text-decoration: none;
+    width: 50%;
+    padding: 0.5rem;
+    color: rgb(120, 120, 120);
+    border-radius: 10rem;
+    transition: all 0.3s;
+    box-shadow: 1px 16px 43px -24px rgba(66, 68, 90, 1);
+}
+
+.in-header a:hover{
+    color: rgb(0, 0, 0);
+    transform: translateY(-5px);
+    background-color: #f2f2f2;
+}
+
+.in-header a:hover .in-header h1{
+	transform: scale(1.2);
 }
 
 .in-header h1{
 	font-size: 3.7rem;
-	padding: 2rem;
-}
-
-.in-header p{
-	font-size: 1.5rem;
-	line-height: 1.5;
-	color: lime;
+    margin-bottom: 2rem;
 }
 
 @media(max-width: 480px){
-	.in-header h2{
-        font-size: 28px;
-    }
-    
     .in-header h1{
         font-size: 48px;
         padding: 16px;
-    }
-    
-    .in-header p{
-        font-size: 20px;
-        line-height: 1.2;
-        color: lime;
     }
 }
 /*-----------------------Główna treść strony-----------------------*/
@@ -300,7 +299,7 @@ header{
 }
 
 .article_about:hover{
-    background-color: #919191;
+    background-color: #acacac;
     transform: translateY(-10px);
 }
 
@@ -572,11 +571,12 @@ header{
 
 .call button{
     padding: 0.4rem;
-    width: 4.5rem;
+    width: 20%;
     background-color: #3e79d8;
     opacity: 0.8;
     border-radius: 10px;
     color: white;
+    transition: all 0.3s;
 }
 
 .call button:hover{
@@ -592,17 +592,46 @@ header{
 .fa-facebook{
 	font-size: 2.7rem;
 	color: #3b5998;
+    background-color: #e2e2e2;
+    padding: 2.5rem;
+    border-radius: 50%;
 }
 
 .fa-phone{
 	font-size: 2.7rem;
 	color: #0a910e;
+    background-color: #e2e2e2;;
+    padding: 2.5rem;
+    border-radius: 50%;
 }
 
 .fa-envelope{
 	font-size: 2.7rem;
 	color: rgb(224, 191, 0);
+    background-color: #e2e2e2;
+    padding: 2.5rem;
+    border-radius: 50%;
+    transition: all 0.3s;
 }
+
+.contact-call:hover .fa-envelope{
+    animation: shaking 0.35s 3;
+}
+
+.contact-call:hover .fa-facebook{
+    animation: shaking 0.35s 3;
+}
+
+.contact-call:hover .fa-phone{
+    animation: shaking 0.35s 3;
+}
+
+@keyframes shaking {
+    0% { transform: translateX(3px) }
+    35% { transform: rotate(15deg) }
+    75% { transform: rotate(-15deg) }
+    100% { transform: rotate(0) }
+  }
 
 
 /*-----------------------STOPKA-----------------------*/
