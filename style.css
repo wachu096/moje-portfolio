@@ -337,20 +337,15 @@ header{
 	background: linear-gradient(to bottom, #cfe7fa 0%,#6393c1 100%);
 	height: auto;
     overflow: hidden;
-    padding-top: 40px;
-}
 
-.actualProjects{
-    width: 100%;
-    height: auto;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
 }
 
 .containerProjects {
   position: relative;
-  width: 42%;
-  margin: 2% 4%;
-  float: left;
+  margin: 0 30px;
 }
 
 .containerProjects img {
@@ -402,14 +397,10 @@ header{
 
 @media(max-width: 768px){
     .containerProjects {
-        position: relative;
-        width: 100%;
-        float: none;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 4%;
+        grid-column: 1 / -1;
       }
 }
+
 /*-------------------------------------------------------------*/
 .projects .components{
     background-color: #f1f1f1;
@@ -418,6 +409,8 @@ header{
     overflow: hidden;
     padding-bottom: 40px;
     padding-top: 20px;
+
+    grid-column: 1 / -1;
 }
 
 .frames{
@@ -470,6 +463,7 @@ header{
 .in-projects-top{
 	text-align: center;
 	padding: 1rem 20rem;
+    grid-column: 1 / -1;
 }
 
 .in-projects-top h2{
